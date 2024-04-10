@@ -15,9 +15,15 @@ def encode(passC):
 
 if __name__ == "__main__":
 
-    menu = input("What would you like to do?\n1. Encode Passcode \n2. Decode Passcode\n:")
-    passcode = input("Enter your passcode")
-    encoded = encode(passcode)
+    while menu != 3: 
+        menu = input("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\nPlease enter an option: ")
+        if menu == 1: 
+            passcode = input("Please enter your password to encode: ")
 
-    #testing testing 1 2 3
-    print("This is a change") #change
+            encoded = encode(passcode)
+            print("Your password has been encoded and stored!")
+
+        if menu == 2: 
+            #put decoding function here
+            print(f"The encoded password is X, and the original password is {passcode}")
+        
