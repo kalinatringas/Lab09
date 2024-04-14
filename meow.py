@@ -13,6 +13,14 @@ def encode(passC):
         encoded.append(meow)
     return encoded 
 
+def decode (passC):
+    #already should be an integer at this point
+    decoded = []
+    for i in range (len(passC)):
+        meow = passC[i] - 3
+        decoded.append(meow)
+    return decoded 
+
 if __name__ == "__main__":
 
     while menu != 3: 
