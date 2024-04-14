@@ -33,7 +33,7 @@ if __name__ == "__main__":
         if menu == "2": 
             #put decoding function here
             decoded = decode(encoded)
-            print(f"The encoded password is {decoded}, and the original password is {passcode}")
+            print(f"The encoded password is {passcode}, and the original password is {encoded}")
 
         if menu == "3":
             break
