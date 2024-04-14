@@ -6,12 +6,11 @@
 # “00009962” will become “33332295” after encoding.
 
 def encode(passC):
-    passC = int(passC)
     encoded = []
     for i in range (len(passC)): 
-        meow = passC[i] +3 
-        encoded.append(meow)
-    return encoded 
+        meow = int(passC[i]) +3 #make it an integer so we can play with it 
+        encoded.append(str(meow)) # make it back into a str
+    return ''.join(encoded) 
 
 def decode (passC):
     #already should be an integer at this point
@@ -19,19 +18,25 @@ def decode (passC):
     for i in range (len(passC)):
         meow = passC[i] - 3
         decoded.append(meow)
-    return decoded 
+    return ''.join(decoded) 
 
 if __name__ == "__main__":
-
-    while menu != 3: 
+    print("meow")
+    menu = "1"
+    while menu: 
         menu = input("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\nPlease enter an option: ")
-        if menu == 1: 
+        if menu == "1": 
             passcode = input("Please enter your password to encode: ")
 
             encoded = encode(passcode)
             print("Your password has been encoded and stored!")
+            print(encoded)
 
-        if menu == 2: 
+        if menu == "2": 
             #put decoding function here
-            print(f"The encoded password is X, and the original password is {passcode}")
+            decoded = decode(encoded)
+            print(f"The encoded password is f{decode}, and the original password is {passcode}")
+
+        if menu == "3":
+            break
         
