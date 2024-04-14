@@ -16,8 +16,8 @@ def decode (passC):
     #already should be an integer at this point
     decoded = []
     for i in range (len(passC)):
-        meow = passC[i] - 3
-        decoded.append(meow)
+        meow = int(passC[i]) - 3
+        decoded.append(str(meow))
     return ''.join(decoded) 
 
 if __name__ == "__main__":
@@ -35,7 +35,7 @@ if __name__ == "__main__":
         if menu == "2": 
             #put decoding function here
             decoded = decode(encoded)
-            print(f"The encoded password is f{decode}, and the original password is {passcode}")
+            print(f"The encoded password is {decoded}, and the original password is {passcode}")
 
         if menu == "3":
             break
