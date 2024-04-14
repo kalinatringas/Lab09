@@ -30,11 +30,17 @@ if __name__ == "__main__":
             encoded = encode(passcode)
             print("Your password has been encoded and stored!")
 
-        if menu == "2": 
+        elif menu == "2": 
             #put decoding function here
-            decoded = decode(encoded)
-            print(f"The encoded password is {encoded}, and the original password is {passcode}")
+            if 'encoded' in locals():
+                decoded = decode(encoded)
+                print(f"The encoded password is {encoded}, and the original password is {passcode}")
+            else:
+                print("You haven't encoded any password yet.")
 
-        if menu == "3":
+        elif menu == "3":
             break
+
+        else: 
+            print("Invalid option. Please enter a valid option.")
         
