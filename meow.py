@@ -21,7 +21,6 @@ def decode (passC):
     return ''.join(decoded) 
 
 if __name__ == "__main__":
-    print("meow")
     menu = "1"
     while menu: 
         menu = input("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\nPlease enter an option: ")
@@ -30,7 +29,6 @@ if __name__ == "__main__":
 
             encoded = encode(passcode)
             print("Your password has been encoded and stored!")
-            print(encoded)
 
         if menu == "2": 
             #put decoding function here
